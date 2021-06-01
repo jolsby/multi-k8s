@@ -12,5 +12,5 @@ docker push jolsby/multi-worker:$SHA
 
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=jolsby/multi-server:$SHA
-kubectl set image deployments/client-deployment server=jolsby/multi-client:$SHA
-kubectl set image deployments/worker-deployment server=jolsby/multi-worker:$SHA
+kubectl set image deployments/client-deployment client=jolsby/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=jolsby/multi-worker:$SHA
